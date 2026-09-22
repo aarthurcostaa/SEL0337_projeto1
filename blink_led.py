@@ -11,7 +11,6 @@ executa o cleanup das GPIOs ao ser interrompido pelo teclado (CTRL+C).
 """
 
 import time
-
 import RPi.GPIO as GPIO
 
 PINO_LED = 18       # GPIO18             
@@ -53,8 +52,8 @@ def configurar_gpio():
 def main():
     configurar_gpio()
 
-    print("Pressione o botao para acender o LED.")
-    print("CTRL+C encerra o programa e libera as GPIOs.\n")
+    print("Pressione o botao para acender o LED")
+    print("CTRL+C encerra o programa e libera as GPIOs\n")
     tratar_evento_botao(PINO_BOTAO) # certeza que o LED iniciará desligado 
 
     try:
@@ -63,13 +62,13 @@ def main():
 
     except KeyboardInterrupt:
         # Trata a interrupcao por teclado (CTRL+C)
-        print("\nInterrompido pelo teclado (CTRL+C).")
+        print("\nInterrompido pelo teclado (CTRL+C)")
 
     finally:
         # Limpeza das portas
         GPIO.remove_event_detect(PINO_BOTAO)
         GPIO.cleanup()
-        print("GPIOs liberadas (cleanup concluido).")
+        print("GPIOs liberadas")
 
 
 if __name__ == "__main__":
