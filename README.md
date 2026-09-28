@@ -53,3 +53,26 @@ https://github.com/user-attachments/assets/8a5af3e6-1a15-4d77-9f76-82c7d6c4cdf7
 3) Circuito com o código sendo executado
 
 https://github.com/user-attachments/assets/37f91a6a-f43d-4e78-a797-dd2cc1cbf637
+
+# distance_sensor.py
+Este código faz o controle da leitura do sensor, calculo da distância e gerenciamento dos LEDs de indicação. 
+
+As funções utilizadas são:
+1) leds_para_distancia: recebe a distância lida pelo sensor e retorna quantos leds deverão ser acesos.
+2) padrão_da_barra: recebe a quantidade de leds que devem ligar e retorna o vetor correspondente para ligá-los.
+3) main: edita as mensagens no terminal de indicação ao usuário, processa interrupções via teclado e limpa as portas que estão sendo utilizadas.
+
+Para ilustrar o funcionamento do código, seguem abaixo, respectivamente: A montagem do circuito e a sua devida demonstração.
+
+1) Montagem do circuito:
+
+<img width="960" height="1280" alt="distance" src="https://github.com/user-attachments/assets/b4a5b153-2472-4ee4-9f60-ac1d020b876b" />
+
+
+2) Demonstração de funcionamento:
+
+   
+
+https://github.com/user-attachments/assets/a178d16a-d6b9-4a52-8a2c-18d3abd130a2
+
+
