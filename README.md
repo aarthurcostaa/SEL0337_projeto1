@@ -16,8 +16,6 @@ Para isso foram utilizadas as bibliotecas time e RPi.GPIO. No código temos 3 fu
 3) main: Chama a função de configuração das portas,  printa na tela as instruções ao usuário, trata as interrupções via teclado e libera as portas após
    o final encerramento do programa.
 
-
-
 # countdown.py
 Consiste em receber uma quantidade de segundos do usuário, tratar esse dado para certificar que é um formato válido e após a validação inicia uma contagem regressiva
 de acordo com o que foi informado pelo terminal. Ao final da contagem o LED é aceso.
@@ -28,3 +26,7 @@ As funções utilizadas são:
 2) contagem_regressiva: Recebe a quantidade de segundos já validada, realiza a conversão e vai atualizando o contador a cada segundo (end="" + flush=True para não
    gerar várias linhas no print).
 3) main: chama as funções anteriores e admistra a liberação das portas após a interrupção do usuário.
+
+
+# Checkpoint 2
+
