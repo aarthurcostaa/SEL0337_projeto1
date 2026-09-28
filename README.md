@@ -29,4 +29,27 @@ As funções utilizadas são:
 
 
 # Checkpoint 2
+O segundo checkpoint consiste em dois programas: pwm_fade.py e distance_sensor.py
 
+# pwm_fade.py
+Este programa controla o brilho de um led por meio da aplicação de um sinal PWM com duty cicle variável para gerar um efeito de gradiente no led. O sinal PWM recebe uma correção gama para suavizar a transição devido à percepção de brilho do olho humano. 
+
+As funções utilizadas são: 
+1) brilho_para_duty: recebe o valor de brilho entre 0 e 1 e retorna o sinal corrigido por gama.
+2) sequencia_triangular: gera a sequência de números que irá modular o sinal PWM e gerar efetivamente o efeito de gradiente.
+3) degrade_em_loop: aplica a sequência de números da rampa no sinal de PWM
+4) ler_argumentos: coleta possíveis argumentos passados pelo usuário via terminal.
+5) main: organiza todas as funções acima de maneira que o usuário seja notificado em cada etapa e se algum erro aconteceu.
+
+Para ilustrar o funcionamento, seguem abaixo repectivamente: uma foto da montagem do circuito, a leitura do sinal PWM via osciloscópio e o circuito enquanto o código é executado.
+
+1) Montagem do circuito
+<img width="960" height="1280" alt="pwm" src="https://github.com/user-attachments/assets/1c5287ea-16c0-479a-a110-f7adc699a250" />
+
+2) Leitura do PWM pelo osciloscópio
+
+https://github.com/user-attachments/assets/8a5af3e6-1a15-4d77-9f76-82c7d6c4cdf7
+
+3) Circuito com o código sendo executado
+
+https://github.com/user-attachments/assets/37f91a6a-f43d-4e78-a797-dd2cc1cbf637
